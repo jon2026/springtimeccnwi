@@ -22,7 +22,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: white;
+            background-color: rgb(255, 255, 255, .8);
             padding: 15px 40px;
             display: flex;
             justify-content: space-between;
@@ -60,7 +60,7 @@
         .company-name {
             font-size: 24px;
             font-weight: 500;
-            color: #333;
+            color: #084d08;
         }
 
         nav {
@@ -70,7 +70,7 @@
 
         nav a {
             text-decoration: none;
-            color: #333;
+            color: #084d08;
             font-size: 16px;
             font-weight: 600;
             transition: color 0.3s;
@@ -116,11 +116,11 @@
         }
 
         .hero-title .green-text {
-            color: #4a6741;
+            color: rgba(49, 105, 60, 1);
         }
 
         .hero-title .yellow-text {
-            color: #f4c430;
+            color: #fae13f;
         }
 
         .hero-tagline {
@@ -147,22 +147,22 @@
             position: absolute;
             bottom: -10px;
             left: -25px;
-            background-color: #f4c430;
+            background-color: #ffe74e;
             padding: 30px 40px;
             border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 25px rgba(49, 105, 60, 0.2);
         }
 
         .experience-number {
             font-size: 48px;
             font-weight: bold;
-            color: #333;
+            color: rgba(49, 105, 60, 1);
             line-height: 1;
         }
 
         .experience-text {
             font-size: 16px;
-            color: #333;
+            color: rgba(49, 105, 60, 1);
             margin-top: 5px;
         }
 
@@ -187,7 +187,8 @@
 
         /* Cleaning Process Section */
         .cleaning-process-section {
-            padding: 100px 40px;
+            padding: 65px 40px;
+            /* padding-top: 55px; */
             background-color: white;
             max-width: 1400px;
             margin: 0 auto;
@@ -212,7 +213,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
-            margin-bottom: 80px;
+            margin-bottom: 40px;
         }
 
         .process-card {
@@ -256,6 +257,28 @@
             line-height: 1.6;
         }
 
+        .method-button {
+            background-color: #ffe74e;
+            color: rgba(49, 105, 60, 1);
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 235px 20px  auto;  /* 20px 235px  20px    */
+            display: block;
+            text-align: center;
+            max-width: fit-content;
+            }
+
+        .method-button:hover {
+            background-color: #f8f7af;
+            }
+
         .benefits-section {
             display: flex;
             gap: 60px;
@@ -265,6 +288,8 @@
         .benefits-image-container {
             flex: 1;
             max-width: 600px;
+            position: relative;
+            display: inline-block;
         }
 
         .benefits-image {
@@ -272,6 +297,19 @@
             height: auto;
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .benefits-image-caption {
+            position: absolute;
+            bottom: 4px;
+            right: 1.5px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 14px;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 525;
+            border-radius: 20px;
         }
 
         .benefits-content {
@@ -338,7 +376,7 @@
 
         /* Testimonials Section */
         .testimonials-section {
-            padding: 100px 40px;
+            padding: 65px 40px;
             background-color: #f5f5f5;
             max-width: 1400px;
             margin: 0 auto;
@@ -363,7 +401,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .testimonial-card {
@@ -422,18 +460,18 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30;
-            margin-bottom: 30px;            
+            margin-bottom: 15px;            
         }
         
         .stat-item {
             display: flex;
             justify-content: center;
-            margin-top: 25px;
+            margin-top: 15px;
         }
         
         .stat-badge {
             background-color: #508340;
-            padding: 30px 50px;
+            padding: 18px 22px;
             border-radius: 20px;
             text-align: center;
             text-decoration: none;
@@ -456,7 +494,7 @@
 
         .google-rating-badge {
             background-color: #508340;
-            padding: 30px 50px;
+            padding: 18px 22px;
             border-radius: 20px;
             text-align: center;
             text-decoration: none;
@@ -464,16 +502,68 @@
             box-shadow: 0 6px 18px rgba(0,0,0,0.2);
         }
 
-        .google-rating-badge:hover {
+        /* .google-rating-badge:hover {
             transform: translateY(-5px);
             box-shadow: 0 18px 42px rgba(0, 0, 0, 0.25);
             background-color: #385d2d;
             border-color: #314a2a;
+            opacity: 1;
+        } */
+
+
+        
+        /* .rating-starsg {
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+            margin: 15px 0;
+        }
+        
+        .starg {
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        } */
+
+        .google-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(153, 3, 3, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 12px;
+            z-index: 2;
+        }
+        
+        .google-overlay-text {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            padding: 15px 25px;
+            border: 2px solid white;
+            border-radius: 8px;
+            background-color: transparent;
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Show overlay on hover */
+        .google-rating-badge:hover .google-overlay {
+            opacity: 1;
         }
 
         /* Contact Section */
         .contact-section {
-            padding: 100px 40px;
+            padding: 65px 40px;
             background-color: white;
             max-width: 1400px;
             margin: 0 auto;
@@ -568,7 +658,7 @@
 
         /* About Section */
         .about-section {
-            padding: 100px 40px;
+            padding: 65px 40px;
             background-color: #f5f5f5;
             max-width: 1400px;
             margin: 0 auto;
@@ -854,7 +944,7 @@
 
         /* Services Section */
         .services-section {
-            padding: 100px 40px;
+            padding: 65px 40px;
             background-color: #f5f5f5;
             max-width: 1400px;
             margin: 0 auto;
@@ -927,9 +1017,41 @@
             line-height: 1.6;
         }
 
+        .more-buttons {
+            background-color: #ffe74e;
+            color: rgba(49, 105, 60, 1);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; 
+            display: inline-block;
+            }
+
+        .more-buttons:hover {
+            background-color: #f8f7af;
+        }
+
         @media (max-width: 1024px) {
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .more-buttons {
+                padding: 13px 35px;
+                font-size: 15px;
+                width: 100%;
+                max-width: 300px;
+            }
+  
+            .image-caption {
+                font-size: 13px;
+                padding: 4px 8px;
+                bottom: 8px;
+                right: 8px;
             }
         }
 
@@ -978,7 +1100,7 @@
             }
 
             .services-section {
-                padding: 60px 20px;
+                padding: 55px 20px;
             }
 
             .services-title {
@@ -1020,7 +1142,7 @@
             }
 
             .cleaning-process-section {
-                padding: 60px 20px;
+                padding: 55px 20px;
             }
 
             .process-title {
@@ -1107,7 +1229,7 @@
             }
 
             .testimonials-section {
-                padding: 60px 20px;
+                padding: 55px 20px;
             }
 
             .testimonials-title {
@@ -1164,7 +1286,7 @@
             }
 
             .contact-section {
-                padding: 60px 20px;
+                padding: 55px 20px;
             }
 
             .contact-title {
@@ -1212,7 +1334,7 @@
             }
 
             .about-section {
-                padding: 60px 20px;
+                padding: 55px 20px;
             }
 
             .about-title {
@@ -1259,6 +1381,29 @@
 
             .why-choose-text {
                 font-size: 14px;
+            }
+
+            .more-buttons {
+                padding: 12px 30px;
+                font-size: 14px;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .image-container {
+                width: 100%;
+            }
+            
+            .image-container img {
+                width: 100%;
+                height: auto;
+            }
+            
+            .image-caption {
+                font-size: 12px;
+                padding: 4px 8px;
+                bottom: 5px;
+                right: 5px;
             }
 
             .footer-content {
@@ -1342,7 +1487,7 @@
                 Privately own<br>
                 since <span class="green-text">1986</span><br>
                 making carpet<br>
-                clean and <span class="yellow-text">& fresh</span>
+                clean and <span class="yellow-text">fresh</span>
             </h1>
             <p class="hero-tagline">We clean the corners that others cut.®</p>
         </div>
@@ -1463,9 +1608,14 @@
             </div>
         </div>
 
+        <div>
+            <a href="cleaning_methods.html" class="method-button">Learn More About Our Cleaning Process</a>
+        </div>
+        
         <div class="benefits-section">
             <div class="benefits-image-container">
                 <img src="images\cleaned-carpet-2.png" alt="Professional carpet cleaning" class="benefits-image">
+		        <p class="benefits-image-caption">cleaning demonstration</p>
             </div>
             
             <div class="benefits-content">
@@ -1591,11 +1741,21 @@
             </div>
             
             <div class="stat-item">
-                    <!-- Google Business Profile review link -->
-                    <a href="https://www.google.com/search?q=springtime+carpet+cleaner&oq=springtime+carpet+cleaner&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIxgnMggIAhAAGBYYHjIICAMQABgWGB4yDQgEEAAYhgMYgAQYigUyDQgFEAAYhgMYgAQYigUyBggGEEUYPDIGCAcQRRg80gEIODA1OGowajeoAgiwAgHxBegs4iEoHrYU&sourceid=chrome&ie=UTF-8&zx=1766369677009&no_sw_cr=1#lrd=0x8811eafc42b80af9:0xf43bd623fec50525,1,,,," target="_blank" class="google-rating-badge">
-                        <div class="stat-number">5.0/5.0</div>
-                        <div class="stat-label">Google Rating</div>
-                    </a>
+                <!-- Google Business Profile review link -->
+                <a href="https://www.google.com/search?q=springtime+carpet+cleaner&oq=springtime+carpet+cleaner&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIxgnMggIAhAAGBYYHjIICAMQABgWGB4yDQgEEAAYhgMYgAQYigUyDQgFEAAYhgMYgAQYigUyBggGEEUYPDIGCAcQRRg80gEIODA1OGowajeoAgiwAgHxBegs4iEoHrYU&sourceid=chrome&ie=UTF-8&zx=1766369677009&no_sw_cr=1#lrd=0x8811eafc42b80af9:0xf43bd623fec50525,1,,,," target="_blank" class="google-rating-badge">
+                    <div class="stat-number">5.0/5.0</div>
+                    <!-- <div class="rating-starsg">
+                        <div class="starg"></div>
+                        <div class="starg"></div>
+                        <div class="starg"></div>
+                        <div class="starg"></div>
+                        <div class="starg"></div>
+                    </div> -->
+                    <div class="stat-label">Google Rating</div>
+                </a>
+                <div class="google-overlay">
+                    <div class="google-overlay-text">click to view rating</div>
+                </div>
             </div>
 
             <div class="stat-item">
@@ -1671,6 +1831,7 @@
                 <p class="story-paragraph">
                     When the customer base for the cleaning business was sufficient, I quit Thrall Car and have been cleaning full time ever since. I have been cleaning for 32 years and have cleaned over 23 thousands homes. In order to be properly trained, I have attended 8 different schools on cleaning. However, I must say that I have learned more by just being in those 23,000 homes and looking to my Lord for ideas.
                 </p>
+                <a href="story.html" class="more-buttons">Read more</a>
             </div>
         </div>
 
@@ -1760,6 +1921,40 @@
                 }
             });
         });
+
+        // JavaScript to ensure all .xyz-badge elements have the hover functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all tiles with class "xyz-badge"
+            const tiles = document.querySelectorAll('.google-rating-badge');
+            
+            // For each tile, add click event listener for demonstration
+            tiles.forEach(tile => {
+                tile.addEventListener('click', function() {
+                    const productName = this.querySelector('.tile-title').textContent;
+                    alert(`Viewing rating for: ${productName}\n(Simulated action - in a real app, this would show a rating)`);
+                });
+                
+                // Note: The HTML already contains the overlay structure
+                // If tiles were dynamically created without overlays, we would add them here:
+                /*
+                // Create overlay element
+                const overlay = document.createElement('div');
+                overlay.className = 'tile-overlay';
+                
+                // Create text element
+                const text = document.createElement('div');
+                text.className = 'tile-overlay-text';
+                text.textContent = 'click to view rating';
+                
+                // Add text to overlay and overlay to tile
+                overlay.appendChild(text);
+                tile.appendChild(overlay);
+                */
+            });
+            
+            // Log message to show JavaScript is working
+            console.log(`Tile hover effect initialized for ${tiles.length} tiles`);
+        });
     </script>
 </body>
 </html>
@@ -1769,13 +1964,22 @@
 !!! comming soon face book
 
 google rating
-nav 
+
 other buttons to pages
-other pages
+
+maybe two buttons for faq
+
+
 
 scalability and mobile testing
 
+make three tile section better
 may be try something with the logo
 no icons on top
+scroll matches nav highlight
+logo for web tab
+title should have a link to go home
+
+section padding
 
 -->
