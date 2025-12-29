@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Time Carpet Cleaners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgb(255, 255, 255, .8);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #4a6741;
+            border: 1.5px solid rgb(176, 253, 170);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .company-name {
+            font-size: 24px;
+            font-weight: 500;
+            color: #084d08;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #084d08;
+            font-size: 16px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4ae51b;
+        }
+
+        .hero-section {
+            margin-top: 100px;
+            padding: 60px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .service-tag {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: white;
+            border-radius: 25px;
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .hero-title {
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .hero-title .green-text {
+            color: rgba(49, 105, 60, 1);
+        }
+
+        .hero-title .yellow-text {
+            color: #fae13f;
+        }
+
+        .hero-tagline {
+            font-size: 24px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-images {
+            display: inline-block;
+            background-color: #ffe74e;
+            color: rgba(49, 105, 60, 1);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 550;
+            transition: background-color 0.15s ease;
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+
+        .hero-images:hover {
+            background-color: #f8f7af;
+        }
+
+        .hero-image-container {
+            flex: 1;
+            position: relative;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -10px;
+            left: -25px;
+            background-color: #ffe74e;
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(49, 105, 60, 0.2);
+        }
+
+        .experience-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: rgba(49, 105, 60, 1);
+            line-height: 1;
+        }
+
+        .experience-text {
+            font-size: 16px;
+            color: rgba(49, 105, 60, 1);
+            margin-top: 5px;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-title {
+                font-size: 48px;
+            }
+
+            .experience-badge {
+                left: 20px;
+            }
+        }
+
+        /* Cleaning Process Section */
+        .cleaning-process-section {
+            padding: 65px 40px;
+            /* padding-top: 55px; */
+            background-color: white;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .process-title {
+            font-size: 48px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .process-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .process-card {
+            background-color: white;
+            padding: 35px 30px;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background-color: #4a6741;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .process-content {
+            flex: 1;
+        }
+
+        .process-step-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .process-description {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .method-button {
+            background-color: #ffe74e;
+            color: rgba(49, 105, 60, 1);
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 25px auto;  /* 20px 235px  20px auto */
+            display: block;
+            justify-content: center;
+            text-align: center;
+            max-width: fit-content;
+            }
+
+        .method-button:hover {
+            background-color: #f8f7af;
+            }
+
+        .benefits-section {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .benefits-image-container {
+            flex: 1;
+            max-width: 600px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .benefits-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .benefits-image-caption {
+            position: absolute;
+            bottom: 4px;
+            right: 1.5px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 8px 14px;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 525;
+            border-radius: 20px;
+        }
+
+        .benefits-content {
+            flex: 1;
+        }
+
+        .benefits-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .benefit-icon {
+            width: 32px;
+            height: 32px;
+            background-color: #e8f5e9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a6741;
+            flex-shrink: 0;
+        }
+
+        .benefit-text {
+            font-size: 15px;
+            color: #666;
+        }
+
+        .guarantee-box {
+            background-color: #fffbf0;
+            border: 2px solid #f4c430;
+            border-radius: 15px;
+            padding: 25px 30px;
+            margin-top: 30px;
+        }
+
+        .guarantee-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .guarantee-text {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 65px 40px;
+            background-color: #f5f5f5;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .testimonials-title {
+            font-size: 48px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .testimonials-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-card {
+            background-color: white;
+            padding: 35px 30px;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-0.6px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+            border-color: #829a7b;
+        }
+
+        .stars {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            color: #f4c430;
+            font-size: 24px;
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 25px;
+            min-height: 80px;
+        }
+
+        .testimonial-author {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 15px;
+        }
+
+        .author-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .author-location {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30;
+            margin-bottom: 15px;            
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .stat-badge {
+            background-color: #508340;
+            padding: 18px 22px;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: white;
+        }
+
+        .google-rating-badge {
+            background-color: #508340;
+            padding: 18px 22px;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+        .google-rating-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.25);
+            background-color: #385d2d;
+            border-color: #314a2a;
+            opacity: 1;
+        }
+        
+        /* .rating-starsg {
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+            margin: 15px 0;
+        }
+        
+        .starg {
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        } */
+
+       .google-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(153, 3, 3, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 20px;
+            z-index: 2;
+        }
+        
+        .google-overlay-text {
+            color: white;
+            font-size: 18px;
+            font-weight: 550;
+            text-align: center;
+            padding: 45px 17px;
+            border: 2px solid white;
+            border-radius: 20px;
+            background-color: transparent;
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Show overlay on hover */
+        .google-rating-badge:hover .google-overlay {
+            opacity: 1;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 65px 40px;
+            background-color: white;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 48px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .contact-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-cards-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            width: 100%;
+            background-color: white;
+            padding: 30px 35px;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-1.5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+            border-color: #285619;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a6741;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover .contact-icon {
+            background-color: #34ad0f;
+            color: white;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .contact-detail {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 3px;
+        }
+
+        .contact-note {
+            font-size: 14px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 65px 40px;
+            background-color: #f5f5f5;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-size: 48px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .about-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        .about-image-container {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .story-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .story-paragraph {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .why-choose-box {
+            background-color: #fffbf0;
+            border: 2px solid #f4c430;
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-choose-title {
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        .why-choose-item {
+            text-align: center;
+        }
+
+        .why-choose-heading {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .why-choose-text {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: white;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 60px;
+        }
+
+        .footer-brand {
+            flex: 0 0 280px;
+        }
+
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo {
+            width: 45px;
+            height: 45px;
+            background-color: #4a6741;
+            border: 1.5px solid rgb(159, 253, 153);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .footer-company-name {
+            font-size: 22px;
+            font-weight: 500;
+            color: #084d08;
+            white-space: nowrap;
+        }
+
+        .footer-tagline {
+            font-size: 14.5px;
+            color: #084d08;
+            margin-top: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 80px;
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        .footer-column {
+            min-width: 150px;
+        }
+
+        .footer-heading {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .footer-list {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-list li {
+            margin-bottom: 12px;
+        }
+
+        .footer-list a {
+            text-decoration: none;
+            color: #666;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-list a:hover {
+            color: #235813;
+            text-decoration: underline;
+            font-weight: 500; 
+        }
+
+        .social-icon {
+            display: inline-block;
+        }
+
+        .social-icon a {
+            width: 45px;
+            height: 45px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            transition: all 0.3s;
+        }
+
+        .social-icon a:hover {
+            transform: translateY(-1px);
+            background-color: #4a6741;
+            color: white;
+            border-color: #4a6741;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #e0e0e0;
+            padding: 25px 40px;
+            text-align: center;
+            background-color: rgba(49, 105, 60, 1);
+        }
+
+        .copyright {
+            font-size: 16px;
+            font-weight: 575;
+            font-style: italic;
+            /* color: #f3e480; */
+            color: #888888;
+        }
+
+        @media (max-width: 1024px) {
+            .method-button {
+                padding: 13px 18px;
+                font-size: 16px;
+                margin: 20px auto;
+            }
+
+            .benefits-section {
+                flex-direction: column;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+                margin-bottom: 12px;
+            }
+            
+            .stat-item {
+                margin-top: 12px;
+            }
+            
+            .stat-badge {
+                padding: 16px 20px;
+                border-radius: 18px;
+            }
+
+            .stat-number {
+                font-size: 42px;
+                margin-bottom: 8px;
+            }
+            
+            .stat-label {
+                font-size: 16px;
+            }
+
+            .google-rating-badge {
+                padding: 16px 20px;
+                border-radius: 18px;
+            }
+
+            .google-overlay {
+                border-radius: 18px;
+            }
+            
+            .google-overlay-text {
+                font-size: 16px;
+                font-weight: 550;
+                padding: 40px 15px;
+                border-radius: 18px;
+                letter-spacing: 0.4px;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .footer-brand {
+                flex: 1;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 30px;
+                width: 100%;
+            }
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 45px 40px;
+            background-color: #f5f5f5;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .services-title {
+            font-size: 48px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .services-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-1.5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+            border-color: #559c3f;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #f0f0f0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #4a6741;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background-color: #34ad0f;
+            color: white;
+        }
+
+        .service-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .service-description {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .more-buttons {
+            background-color: #ffe74e;
+            color: rgba(49, 105, 60, 1);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; 
+            display: inline-block;
+            }
+
+        .more-buttons:hover {
+            background-color: #f8f7af;
+        }
+
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .more-buttons {
+                padding: 13px 35px;
+                font-size: 15px;
+                width: 100%;
+                max-width: 300px;
+            }
+  
+            .image-caption {
+                font-size: 13px;
+                padding: 4px 8px;
+                bottom: 8px;
+                right: 8px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .company-name {
+                font-size: 20px;
+            }
+
+            .hero-section {
+                padding: 40px 20px;
+                margin-top: 140px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-tagline {
+                font-size: 20px;
+            }
+
+            .hero-images {
+                padding: 13px 35px;
+                font-size: 15px;
+                margin-left: 0px;
+            }
+
+            .experience-badge {
+                padding: 20px 30px;
+                left: 10px;
+                bottom: 10px;
+            }
+
+            .experience-number {
+                font-size: 36px;
+            }
+
+            .experience-text {
+                font-size: 14px;
+            }
+
+            .services-section {
+                padding: 35px 20px;
+            }
+
+            .services-title {
+                font-size: 36px;
+            }
+
+            .services-subtitle {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .service-card {
+                padding: 25px 20px;
+            }
+
+            .service-icon {
+                width: 45px;
+                height: 45px;
+                margin-bottom: 15px;
+            }
+
+            .service-icon svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .service-title {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .service-description {
+                font-size: 14px;
+            }
+
+            .cleaning-process-section {
+                padding: 55px 20px;
+            }
+
+            .process-title {
+                font-size: 36px;
+            }
+
+            .process-subtitle {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin-bottom: 50px;
+            }
+
+            .process-card {
+                padding: 20px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .process-number {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .process-step-title {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+            .process-description {
+                font-size: 14px;
+            }
+
+            .method-button {
+                padding: 13px 18px;
+                font-size: 16px;
+                margin: 20px auto;
+            }            
+
+            .benefits-section {
+                gap: 30px;
+            }
+
+            .benefits-title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .benefits-grid {
+                gap: 12px;
+                margin-bottom: 20px;
+            }
+
+            .benefit-item {
+                gap: 10px;
+            }
+
+            .benefit-icon {
+                width: 28px;
+                height: 28px;
+            }
+
+            .benefit-icon svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .benefit-text {
+                font-size: 14px;
+            }
+
+            .guarantee-box {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .guarantee-title {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .guarantee-text {
+                font-size: 14px;
+            }
+
+            .testimonials-section {
+                padding: 55px 20px;
+            }
+
+            .testimonials-title {
+                font-size: 36px;
+            }
+
+            .testimonials-subtitle {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+
+            .testimonials-grid {
+                gap: 15px;
+                margin-bottom: 40px;
+            }
+
+            .testimonial-card {
+                padding: 25px 20px;
+            }
+
+            .stars {
+                gap: 3px;
+                margin-bottom: 15px;
+            }
+
+            .star {
+                font-size: 20px;
+            }
+
+            .testimonial-text {
+                font-size: 14px;
+                margin-bottom: 20px;
+                min-height: auto;
+            }
+
+            .author-name {
+                font-size: 15px;
+            }
+
+            .author-location {
+                font-size: 13px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .stat-item {
+                margin-top: 10px;
+            }
+            
+            .stat-badge {
+                padding: 15px 18px;
+                border-radius: 16px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+
+            .stat-number {
+                font-size: 36px;
+                margin-bottom: 6px;
+            }
+            
+            .stat-label {
+                font-size: 15px;
+            }
+
+            .google-rating-badge {
+                padding: 15px 18px;
+                border-radius: 16px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+
+            .google-rating-badge:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            .google-overlay {
+                border-radius: 16px;
+                opacity: 0;
+            }
+            
+            .google-overlay-text {
+                font-size: 15px;
+                font-weight: 500;
+                padding: 35px 12px;
+                border-radius: 16px;
+                letter-spacing: 0.3px;
+                box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+            }
+            
+            /* For mobile touch devices */
+            .google-rating-badge:active .google-overlay {
+                opacity: 1;
+            }
+
+            .contact-section {
+                padding: 55px 20px;
+            }
+
+            .contact-title {
+                font-size: 36px;
+            }
+
+            .contact-subtitle {
+                font-size: 16px;
+                margin-bottom: 40px;
+                padding: 0 10px;
+            }
+
+            .contact-cards-container {
+                gap: 15px;
+                max-width: 100%;
+            }
+
+            .contact-card {
+                padding: 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .contact-icon svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .contact-label {
+                font-size: 18px;
+                margin-bottom: 6px;
+            }
+
+            .contact-detail {
+                font-size: 15px;
+            }
+
+            .contact-note {
+                font-size: 13px;
+            }
+
+            .about-section {
+                padding: 55px 20px;
+            }
+
+            .about-title {
+                font-size: 36px;
+            }
+
+            .about-subtitle {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+
+            .about-content {
+                gap: 30px;
+                margin-bottom: 40px;
+            }
+
+            .story-title {
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+
+            .story-paragraph {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+
+            .why-choose-box {
+                padding: 30px 20px;
+            }
+
+            .why-choose-title {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+
+            .why-choose-grid {
+                gap: 25px;
+            }
+
+            .why-choose-heading {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            .why-choose-text {
+                font-size: 14px;
+            }
+
+            .more-buttons {
+                padding: 12px 30px;
+                font-size: 14px;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .image-container {
+                width: 100%;
+            }
+            
+            .image-container img {
+                width: 100%;
+                height: auto;
+            }
+            
+            .image-caption {
+                font-size: 12px;
+                padding: 4px 8px;
+                bottom: 5px;
+                right: 5px;
+            }
+
+            .footer-content {
+                padding: 40px 20px 30px;
+            }
+
+            .footer-company-name {
+                font-size: 18px;
+                white-space: normal;
+            }
+
+            .footer-logo {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .footer-tagline {
+                font-size: 13px;
+            }
+
+            .footer-links {
+                gap: 25px;
+            }
+
+            .footer-heading {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .footer-list li {
+                margin-bottom: 10px;
+            }
+
+            .footer-list a {
+                font-size: 14px;
+            }
+
+            .social-icon a {
+                width: 40px;
+                height: 40px;
+            }
+
+            .social-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .footer-bottom {
+                padding: 20px;
+            }
+
+            .copyright {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="images\logo-2.png" alt="Logo">
+            </div>
+            <div> 
+                <a href="index.html#home" class="company-name">Spring Time Carpet Cleaners</a> 
+            </div>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#cleaning-process">Cleaning Process</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="service-tag">Carpet and Upholstery Cleaning Services</div>
+            <h1 class="hero-title">
+                Privately own<br>
+                since <span class="green-text">1986</span><br>
+                making carpet<br>
+                clean and <span class="yellow-text">fresh</span>
+            </h1>
+            <p class="hero-tagline">We clean the corners that others cut.®</p>
+            <a href="cleaning_images.html" class="hero-images">Professional Cleaning Images</a>
+        </div>
+        <div class="hero-image-container">
+            <img src="images\dreamstime_s_18360745l.jpg" alt="Office workspace" class="hero-image">
+            <div class="experience-badge">
+                <div class="experience-number">40+</div>
+                <div class="experience-text">Years Experience</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <h2 class="services-title">Our Services</h2>
+        <p class="services-subtitle">Professional carpet, tile, and upholstery cleaning services.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3 class="service-title">Residential and Commercial Carpet Cleaning</h3>
+                <p class="service-description">Clean carpets in your home or place of business throughly.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                        <path d="M3 7l9 6 9-6"></path>
+                    </svg>
+                </div>
+                <h3 class="service-title">Upholstery Cleaning</h3>
+                <p class="service-description">Professional cleaning for sofas, chairs, and other fabric furniture.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3 class="service-title">Clean corners and edges</h3>
+                <p class="service-description">Cleaning the edges and corners right up to the baseboards.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="service-title">Stain Removal</h3>
+                <p class="service-description">Expert treatment for stubborn stains including wax, wine, coffee/tea, gum, juice/kool-aid, ink, and pet accidents.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h3 class="service-title">Carpet Protection</h3>
+                <p class="service-description">Apply protective treatments to keep your carpets cleaner for longer periods.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                    </svg>
+                </div>
+                <h3 class="service-title">Pet Odor Treatment</h3>
+                <p class="service-description">Specialized cleaning to eliminate pet odors and leave your home smelling fresh.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cleaning-process" class="cleaning-process-section">
+        <h2 class="process-title">Our Cleaning Process</h2>
+        <p class="process-subtitle">We use industry-leading techniques to ensure your carpets are thoroughly cleaned.</p>
+        
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-number">1</div>
+                <div class="process-content">
+                    <h3 class="process-step-title">Pre-Inspection</h3>
+                    <p class="process-description">We assess your carpets and identify specific problem areas and stains and give you an exact price.</p>
+                </div>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">2</div>
+                <div class="process-content">
+                    <h3 class="process-step-title">Pre-Treatment</h3>
+                    <p class="process-description">We prepare the carpet by removing small items off the floor and pre-treating the carpet for soiled areas and stains.</p>
+                </div>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">3</div>
+                <div class="process-content">
+                    <h3 class="process-step-title">Deep Cleaning</h3>
+                    <p class="process-description">We steam clean the carpet including the edges and behind the furniture.</p>
+                </div>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">4</div>
+                <div class="process-content">
+                    <h3 class="process-step-title">Final Inspection</h3>
+                    <p class="process-description">We ensure every area meets our quality standards and your satisfaction.</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a href="cleaning_methods.html" class="method-button">Learn More About Our Cleaning Process</a>
+        </div>
+        
+        <div class="benefits-section">
+            <div class="benefits-image-container">
+                <img src="images\cleaned-carpet-2.png" alt="Professional carpet cleaning" class="benefits-image">
+		        <p class="benefits-image-caption">cleaning demonstration</p>
+            </div>
+            
+            <div class="benefits-content">
+                <h3 class="benefits-title">Benefits of Professional Cleaning</h3>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <p class="benefit-text">Extends carpet lifespan</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <p class="benefit-text">Helps eliminates odor and bacteria</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <p class="benefit-text">Improves air quality</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <p class="benefit-text">Safe for children & pets</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <p class="benefit-text">Efficient drying time</p>
+                    </div>
+                </div>
+
+                <div class="guarantee-box">
+                    <h4 class="guarantee-title">Satisfaction Guarantee</h4>
+                    <p class="guarantee-text">If you're not satisfied with our cleaning service after we leave, we will come back and re-clean it at no extra charge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2 class="testimonials-title">What Our Customers Say</h2>
+        <p class="testimonials-subtitle">Don't just take our word for it - hear from our satisfied customers.</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="testimonial-text">"I have had Spring Time carpet cleaning as my exclusive carpet cleaning service for my Home and our Bed and Breakfast. The workers are courteous and careful as they move furniture and distribute hoses throughout the rooms. The most important quality is that they extract so much moisture out of the carpets, they dry quickly. I highly recommend them as your lifetime carpet cleaning service too. Barbara Rivera - Songbird Prairie Bed and Breakfast and Spa - One of Midwest Living's "25 Favorite B & B's""</p>
+                <div class="testimonial-author">
+                    <p class="author-name">B. R.</p>
+                    <p class="author-location">Indiana</p>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="testimonial-text">"I have been using Spring Time Carpet Cleaners for the last twenty years. I have thick carpeting and fancy rugs, both are difficult to clean. Nevertheless, they do a fantastic job. I am a satisfied customer and would recommend their services to others."</p>
+                <div class="testimonial-author">
+                    <p class="author-name">R. R.</p>
+                    <p class="author-location">Indiana</p>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <p class="testimonial-text">"We recently moved into a townhouse we purchased. The former owners did not even clean the carpets and they were terrible. There were some black spots in a couple of places and some red spots (looked like juice), in one of the bedrooms. Spring Time Carpet Cleaners sent out Andrew and he got all the spots up, the badly soiled places at the entrances, and all of the carpets came out beautifully. Andrew cleaned all the way to the base boards even at the corners. I am very pleased and highly recommend Spring Time Carpet Cleaners as my carpet cleaning company."</p>
+                <div class="testimonial-author">
+                    <p class="author-name">B. G.</p>
+                    <p class="author-location">Indiana</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-grid">           
+            <div class="stat-item">
+                <a target="_blank" class="stat-badge">
+                    <div class="stat-number">10,000+</div>
+                    <div class="stat-label">Satisfied Customers</div>
+                </a>
+            </div>
+            
+            <div class="stat-item">
+                <!-- Google Business Profile review link -->
+                <a href="https://www.google.com/search?q=springtime+carpet+cleaner&oq=springtime+carpet+cleaner&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIxgnMggIAhAAGBYYHjIICAMQABgWGB4yDQgEEAAYhgMYgAQYigUyDQgFEAAYhgMYgAQYigUyBggGEEUYPDIGCAcQRRg80gEIODA1OGowajeoAgiwAgHxBegs4iEoHrYU&sourceid=chrome&ie=UTF-8&zx=1766369677009&no_sw_cr=1#lrd=0x8811eafc42b80af9:0xf43bd623fec50525,1,,,," target="_blank" class="google-rating-badge">
+                    <div class="stat-number">5.0/5.0</div>
+                    <!-- <div class="rating-starsg">
+                        <div class="starg"></div>
+                        <div class="starg"></div>
+                        <div class="starg"></div>
+                        <div class="starg"></div>
+                        <div class="starg"></div>
+                    </div> -->
+                    <div class="stat-label">Google Rating</div>                
+                    <div class="google-overlay">
+                        <div class="google-overlay-text">click to view rating</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="stat-item">
+                <a target="_blank" class="stat-badge">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Years Experience</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="contact-title">Contact Us</h2>
+        <p class="contact-subtitle">Get a free quote over the phone or schedule your cleaning service today. We're here to help!</p>
+        
+        <div class="contact-cards-container">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <div class="contact-info">
+                    <h3 class="contact-label">Phone</h3>
+                    <p class="contact-detail"> <a href="tel:+12198014610">+1 (219) 769-1355</a> </p> <!--12197691355-->
+                    <p class="contact-note">Call or text anytime</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <div class="contact-info">
+                    <h3 class="contact-label">Service Area</h3>
+                    <p class="contact-detail">North West Indiana</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <div class="contact-info">
+                    <h3 class="contact-label">Office Hours</h3>
+                    <p class="contact-detail">Mon-Sat: 8:00 AM - 9:00 PM</p>
+                    <p class="contact-detail">Sunday: 11:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2 class="about-title">About Us</h2>
+        <p class="about-subtitle">Privately own business serving in Northwest Indiana since 1986.</p>
+        
+        <div class="about-content">
+            <div class="about-image-container">
+                <img src="images\dummy_image.png" alt="Carpet cleaning supplies" class="about-image">
+            </div>
+            
+            <div class="about-text">
+                <h3 class="story-title">Our Story</h3>
+                <p class="story-paragraph">
+                    When I started working for "Stanley Steemer" in 1981 in Pensacola Florida. Four and a half years later, I took a carpet cleaning position in Dearborn Michigan to be with my dying Mother. At that time I started to build my own Truck Mount carpet cleaning machine. This took me about 18 months and cost $13,000. I took this machine to Northwest Indiana in 1986 and took a welding job at a Thrall Car train factory on night shift and started a cleaning business in the mornings.
+                </p>
+                <p class="story-paragraph">
+                    When the customer base for the cleaning business was sufficient, I quit Thrall Car and have been cleaning full time ever since. I have been cleaning for 32 years and have cleaned over 23 thousands homes. In order to be properly trained, I have attended 8 different schools on cleaning. However, I must say that I have learned more by just being in those 23,000 homes and looking to my Lord for ideas.
+                </p>
+                <a href="our_story.html" class="more-buttons">Read more</a>
+            </div>
+        </div>
+
+        <div class="why-choose-box">
+            <h3 class="why-choose-title">Why Choose Us?</h3>
+            <div class="why-choose-grid">
+                <div class="why-choose-item">
+                    <h4 class="why-choose-heading">Qualified Technicians</h4>
+                    <p class="why-choose-text">Our team is fully trained and equiped to handle many situations.</p>
+                </div>
+                <div class="why-choose-item">
+                    <h4 class="why-choose-heading">Professional Equipment</h4>
+                    <p class="why-choose-text">We use professional equipment for exceptional cleaning results.</p>
+                </div>
+                <div class="why-choose-item">
+                    <h4 class="why-choose-heading">Safe Products</h4>
+                    <p class="why-choose-text">Non-toxic solutions that are safe for your family and pets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo-container">
+                    <div class="footer-logo">
+                        <img src="images\logo-2.png" alt="Logo">
+                    </div>
+                    <div class="footer-company-name">Spring Time Carpet Cleaners</div>
+                </div>
+                <p class="footer-tagline">We clean the corners that others cut.®</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-list">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="coming.html">Careers</a></li>
+                        <li><a href="#home">Home</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-list">
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="cleaning_methods.html">Cleaning methods</a></li>
+                        <li><a href="coming.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-icon">
+                        <a href="coming.html" target="_blank" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 Spring Time Carpet Cleaners. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+<!--
+!!! comming soon face book
+
+title button for other pages
+
+
+
+
+other buttons to pages
+
+maybe two buttons for faq
+
+
+
+scalability and mobile testing
+
+make three tile section better
+no icons on top
+scroll matches nav highlight
+logo for web tab
+title has link to go home may add hover
+slide over to new pages feature
+
+add phone number link for mobile
+section padding
+
+-->
