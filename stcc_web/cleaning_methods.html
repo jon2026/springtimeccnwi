@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaning process</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9f5;
+            color: #000000;
+            line-height: 1.8;
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(49, 105, 60, 1) 0%, rgba(101, 140, 70, 1) 100%);
+            color: #f3e480;
+            padding: 40px 18px;
+            text-align: center;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffe74e;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #f8f7af;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto; 
+            padding: 0 20px;
+        }
+
+        .content-section {
+            background-color: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(45, 62, 45, 0.1);
+            border-left: 5px solid #ffe74e;
+        }
+
+        .content-section h3 {
+            color: rgba(49, 105, 60, 1);
+            font-size: 1.9em;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            margin-bottom: 20px;
+            font-size: 1.0em;
+            color: rgba(49, 105, 60, 1);
+        }
+        
+        .grid-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f8f7af;
+            border: 1px solid #f2fc2b;
+            border-radius: 28px;
+            align-items: start;
+        }
+
+        .number-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(49, 105, 60, 1);
+            color: #f3e480;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .grid-content p {
+            margin-bottom: 0;
+            font-size: 700px;
+            font-size: 1.0em;
+            color: rgba(49, 105, 60, 1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffe74e;
+            color: rgba(49, 105, 60, 1);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 550;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #f8f7af;
+        }
+
+        footer {
+            background-color: rgba(49, 105, 60, 1);
+            color: #f3e480;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 1024px) {
+            header {
+                padding: 35px 18px;
+            }
+            
+            .back-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .container {
+                margin: 40px auto;
+                padding: 0 30px;
+            }
+
+            .content-section {
+                padding: 30px;
+                margin-bottom: 25px;
+                border-radius: 7px;
+                border-left: 4px solid #ffe74e;
+            }
+
+            .content-section h3 {
+                font-size: 1.7em;
+                margin-bottom: 18px;
+            }
+
+            .content-section p {
+                margin-bottom: 18px;
+                font-size: 0.95em;
+            }
+
+            .grid-item {
+                grid-template-columns: 70px 1fr;
+                gap: 18px;
+                margin-bottom: 25px;
+                padding: 13px;
+                border-radius: 25px;
+            }
+
+            .number-icon {
+                width: 55px;
+                height: 55px;
+                font-size: 1.6em;
+            }
+
+            .grid-content p {
+                font-size: 0.95em;
+            }
+
+            .cta-button {
+                padding: 13px 35px;
+                font-size: 15px;
+            }
+
+            footer {
+                padding: 20px 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .back-button {
+                padding: 8px 15px;
+                font-size: 13px;
+                top: 15px;
+                left: 15px;
+            }
+
+            .content-section {
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 6px;
+                border-left: 3px solid #ffe74e;
+            }
+
+            .content-section h3 {
+                font-size: 1.5em;
+                margin-bottom: 15px;
+            }
+
+            .content-section p {
+                margin-bottom: 15px;
+                font-size: 0.9em;
+            }
+
+            .grid-item {
+                grid-template-columns: 60px 1fr;
+                gap: 15px;
+                margin-bottom: 20px;
+                padding: 10px;
+                border-radius: 20px;
+            }
+
+            .number-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.4em;
+            }
+
+            .grid-content p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-button">← Spring Time Carpet Cleaners</a>
+        <h1>Our Cleaning methods</h1>
+        <p>We clean the corners that others cut.®</p>
+    </header>
+
+    <div class="container">
+        <div class="content-section">
+            <h3>Overview</h3>
+            <p>We use only the large truck mount extractors, or commonly called "truck mounts." This is the number one method recommended by the companies that make the carpet in the first place. It is the method used by most professional carpet cleaners. The reason not every carpet cleaner will use this method is because it cost way more money than any other machine. I mean thousands more.</p>
+            <p>A person could buy any machine under $2,000.00 to $3,000.00. Buy a truck mount, and I mean one of the big ones, the small ones don't work properly. These will cost over 20,000 dollars for a good one with no trimmings just the big turkey with out any of the dressing.</p>
+            <p>We follow our method for each job. It takes longer to do these steps, but all steps are necessary:</p> 
+            
+            <div class="grid-item">
+                <div class="number-icon">1</div>
+                <div class="grid-content">
+                    <p>We give an exact quote.</p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="number-icon">2</div>
+                <div class="grid-content">
+                    <p>We prep the job by moving things off the floor -- such as shoes, books, and so on.</p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="number-icon">3</div>
+                <div class="grid-content">
+                    <p>We pre-treat the carpet with a pre-spotter for the bad areas. We have a few different spot removers for various spots.</p>
+                    <p>We can even remove red dye from different drinks and juices. Removing red dye may be an additional cost but we can teach you how to do it and give you a toll free number to order it yourself and save money.</p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="number-icon">4</div>
+                <div class="grid-content">
+                    <p>A) We then will move the furniture away from the wall.</p>
+                    <p>B) We then will put the specially designed tools on for cleaning edges and along the baseboards and clean that first. This takes time but the end result is perfect. This is why we say "We clean the corners that others cut"®</p>
+                    <p>C) Then we clean behind the furniture.</p>
+                    <p>D) Then we put the furniture back and place the carpet and furniture protectors under the furniture legs where needed.</p>
+                    <p>E) We then clean the rest of the room.</p>
+                    <p>F) Finally we will brush or groom the carpet.</p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="number-icon">5</div>
+                <div class="grid-content">
+                    <p>We also will clean your closets this same way if you will take your belongings out. Note: if your long clothes or dresses are to close to the floor they will have to be put up or taken out or we will just clean up to them. It's up to you.</p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="number-icon">6</div>
+                <div class="grid-content">
+                    <p>Hallways when cleaned look terrible unless the carpet along the baseboards are cleaned also. This will be done by us at no additional charge. The only time we ever charge for cleaning along a baseboard is when they are extremely dirty and take way to much time. There is a reason why they get this way and we can explain if you call and ask to speak to Wayne.</p>
+                </div>
+            </div>
+            
+            <div class="grid-item">
+                <div class="number-icon">7</div>
+                <div class="grid-content">
+                    <p>By far, most of what I have learned about cleaning has been learned by just going out there 23,000 times and getting it done. But I must say, I believe my Lord has helped me. In fact, I have been to several trade conventions shows and have never even heard anyone talk about cleaning steps any way except the way they all do it, which is in my opinion terrible. Our way is a great idea. This idea is from above if you know what I mean.</p>
+                </div>
+            </div>
+
+            <a href="index.html#contact" class="cta-button">Book an appointment today</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Spring Time Carpet Cleaners. All rights reserved.</p>
+    </footer>
+</body>
+</html>
